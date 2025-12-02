@@ -3,6 +3,7 @@ html, body {
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif ;
     background-color: #EEF0F4;
+    color: #6d563e;
 }
 
 .container {
@@ -15,7 +16,7 @@ html, body {
 input {
     color: #c0966b;
     padding: 10px;
-    border: 1px solid rgb(66, 157, 180);
+    border: 1px solid rgb(160, 144, 93);
     border-radius: 5px;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -29,6 +30,11 @@ button {
     border-radius: 5px;
     text-align: center;
     margin-top: 15px;
+}
+
+button:hover {
+    background-color: rgb(158, 114, 56);
+    cursor: pointer;
 }
 
 img {
@@ -52,4 +58,9 @@ ul li {
     padding: 15px;
     border-radius: 5px;
     text-align: center;
+    cursor: pointer;
+}
+
+ul li:hover {
+    background-color: rgb(233, 215, 187);
 }
