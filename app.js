@@ -7,7 +7,16 @@ const appSettings = {
 
 const app = initializeApp(appSettings)
 const database = getDatabase(app)
-const foodInDB = ref(database, "food")
+
+let deviceId = localStorage.getItem("deviceId")
+
+    if (!deviceId) {
+        deviceId = crypto.randomUUID()
+        localStorage.setItem("deviceId", deviceId)
+    }
+
+
+const foodInDB = ref(database, `food/${deviceId}`)
 
 const inputField = document.getElementById("input-field")
 const addButton = document.getElementById("add-button")
@@ -58,8 +67,7 @@ const shoppingListEl = document.getElementById("shopping-list")
         newEl.textContent = itemValue
 
         newEl.addEventListener("click", function() {
-            let locationInDB = ref(database, `food/${itemID}`)
-
+            let locationInDB = ref(database, `food/${deviceId}/${itemID}`)
             remove(locationInDB)
         })
 
