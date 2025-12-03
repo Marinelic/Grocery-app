@@ -63,5 +63,5 @@ const shoppingListEl = document.getElementById("shopping-list")
             remove(locationInDB)
         })
 
-        shoppingListEl.append(newEl)
+            shoppingListEl.append(newEl)
     }

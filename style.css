@@ -2,8 +2,9 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif ;
-    background-color: #EEF0F4;
+    background-color: #d7dce7;
     color: #6d563e;
+    user-select: none;
 }
 
 .container {
